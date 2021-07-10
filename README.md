@@ -27,7 +27,6 @@ https://user-images.githubusercontent.com/64360913/125173788-b45e4b80-e1de-11eb-
 - [Node.js v14.16.0](https://nodejs.org/en/download/)
 - [npm](https://www.npmjs.com/get-npm)
 - [MongoDB shell version v4.4.6](https://www.mongodb.com/)
-- 
 
 ## Installation:
 * Fork/clone this project to your local machine.
