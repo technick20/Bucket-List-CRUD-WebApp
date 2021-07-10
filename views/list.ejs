@@ -1,0 +1,47 @@
+<%- include("header"); -%>
+
+<div class="container-fluid" >
+
+        <div class="row justify-contents-center text-center" >
+          <div class="col-sm" style="margin: 70px 30px 20px 0">
+            <img src="images/2.jpg" alt=""  width="390px" height="400px">
+          </div>
+          <div class="col-sm" >
+            <div class="box" id="heading" >
+              <h1 style="margin-bottom: 0; padding-bottom: 0;"> <%= listTitle %> </h1>
+              <p id="date" style="color: white; margin-top: 0; padding-top: 0;"></p>
+            </div>
+          
+            <div class="box">
+          
+          
+            <%  newListItems.forEach(function(item){ %>
+          
+              <form action="/delete" method="post">
+                <div class="item">
+                  <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                  <p><%=item.name%></p>
+                </div>
+                <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+              </form>
+            <%  }) %>
+          
+          
+                <form class="item" action="/" method="post">
+                  <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                  <button type="submit" name="list" value="<%= listTitle %>">+</button>
+                </form>
+            </div>
+            </div>
+          <div class="col-sm" style="margin: 300px 30px 20px 0">
+            <img src="images/1.jpg" alt="" width="390px" height="400px">
+          </div>
+        </div>
+
+    
+</div>
+
+
+
+
+<%- include("footer"); -%>
